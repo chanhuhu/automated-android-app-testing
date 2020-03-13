@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200209 17:28:46.153" generator="Robot 3.1.2 (Python 2.7.17 on win32)">
+<suite source="C:\Users\user\Desktop\automatedAndroid\Script-automated\LoginAndroid.robot" id="s1" name="LoginAndroid">
+<test id="s1-t1" name="Check Components In Login Page">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:28:55.099" starttime="20200209 17:28:46.398"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:28:55.100" starttime="20200209 17:28:46.398"></status>
+</kw>
+<kw name="Check Components In Login Page" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:28:56.100" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:28:56.100" starttime="20200209 17:28:55.100"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:28:56.254" starttime="20200209 17:28:56.100"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:28:56.293" starttime="20200209 17:28:56.254"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:28:56.333" starttime="20200209 17:28:56.293"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:28:56.333" starttime="20200209 17:28:55.100"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:28:56.811" starttime="20200209 17:28:56.334"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:28:56.812" critical="yes" starttime="20200209 17:28:46.396"></status>
+</test>
+<test id="s1-t2" name="Successfully Logged In">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:29:05.441" starttime="20200209 17:28:56.814"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:05.441" starttime="20200209 17:28:56.813"></status>
+</kw>
+<kw name="Successfully Logged In" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:05.445" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:29:06.471" starttime="20200209 17:29:05.442"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:06.472" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:29:07.411" starttime="20200209 17:29:06.471"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200209 17:29:07.911" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20200209 17:29:07.911" starttime="20200209 17:29:07.411"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:07.912" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:29:07.957" starttime="20200209 17:29:07.911"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:07.957" starttime="20200209 17:29:05.442"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:29:08.419" starttime="20200209 17:29:07.958"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:08.420" critical="yes" starttime="20200209 17:28:56.813"></status>
+</test>
+<test id="s1-t3" name="Login With Empty Data">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:29:17.089" starttime="20200209 17:29:08.422"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:17.089" starttime="20200209 17:29:08.422"></status>
+</kw>
+<kw name="Login With Empty Data" library="LoginKeywords">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:17.092" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:29:17.452" starttime="20200209 17:29:17.090"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:17.452" starttime="20200209 17:29:17.089"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:29:17.995" starttime="20200209 17:29:17.453"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:17.996" critical="yes" starttime="20200209 17:29:08.421"></status>
+</test>
+<test id="s1-t4" name="Login With Empty Password">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:29:26.666" starttime="20200209 17:29:17.997"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:26.666" starttime="20200209 17:29:17.997"></status>
+</kw>
+<kw name="Login With Empty Password" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:26.668" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:29:27.997" starttime="20200209 17:29:26.667"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:27.998" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:29:28.533" starttime="20200209 17:29:27.997"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:28.533" starttime="20200209 17:29:26.667"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:29:29.010" starttime="20200209 17:29:28.534"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:29.010" critical="yes" starttime="20200209 17:29:17.996"></status>
+</test>
+<test id="s1-t5" name="Login With Empty Username">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:29:37.626" starttime="20200209 17:29:29.013"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:37.626" starttime="20200209 17:29:29.012"></status>
+</kw>
+<kw name="Login With Empty Username" library="LoginKeywords">
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:37.629" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:29:38.617" starttime="20200209 17:29:37.627"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:38.618" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:29:39.647" starttime="20200209 17:29:38.617"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:39.647" starttime="20200209 17:29:37.627"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:29:40.138" starttime="20200209 17:29:39.648"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:40.138" critical="yes" starttime="20200209 17:29:29.011"></status>
+</test>
+<test id="s1-t6" name="Login With Wrong Username or Password">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:29:48.827" starttime="20200209 17:29:40.141"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:48.827" starttime="20200209 17:29:40.140"></status>
+</kw>
+<kw name="Login With Wrong Password" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:48.829" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:29:49.808" starttime="20200209 17:29:48.828"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${wrongPassword}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:49.810" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:29:50.722" starttime="20200209 17:29:49.809"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:29:50.724" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:29:51.261" starttime="20200209 17:29:50.723"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:51.261" starttime="20200209 17:29:48.828"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:29:51.767" starttime="20200209 17:29:51.262"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:29:51.767" critical="yes" starttime="20200209 17:29:40.140"></status>
+</test>
+<test id="s1-t7" name="Login With Wrong Password or Password Then Agree You Get Wrong">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:00.338" starttime="20200209 17:29:51.769"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:00.338" starttime="20200209 17:29:51.769"></status>
+</kw>
+<kw name="Login With Wrong Password" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:00.341" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:30:01.599" starttime="20200209 17:30:00.339"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${wrongPassword}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:01.600" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:30:02.777" starttime="20200209 17:30:01.599"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:02.778" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:30:03.289" starttime="20200209 17:30:02.777"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:03.289" starttime="20200209 17:30:00.338"></status>
+</kw>
+<kw name="Agree That I Am Get Wrong Username Or Password" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:04.290" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:30:04.290" starttime="20200209 17:30:03.290"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${confirmWrongUsernameOrPasswordButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:04.291" level="INFO">Clicking element 'id=buttonDialogOk'.</msg>
+<status status="PASS" endtime="20200209 17:30:04.332" starttime="20200209 17:30:04.290"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:04.332" starttime="20200209 17:30:03.290"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:30:04.931" starttime="20200209 17:30:04.333"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:04.932" critical="yes" starttime="20200209 17:29:51.768"></status>
+</test>
+<test id="s1-t8" name="Check Components In Home Page">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:14.874" starttime="20200209 17:30:04.934"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:14.874" starttime="20200209 17:30:04.934"></status>
+</kw>
+<kw name="Successfully Logged In" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:14.877" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:30:16.186" starttime="20200209 17:30:14.875"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:16.187" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:30:16.739" starttime="20200209 17:30:16.186"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:17.241" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20200209 17:30:17.241" starttime="20200209 17:30:16.739"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:17.242" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:30:17.292" starttime="20200209 17:30:17.241"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:17.292" starttime="20200209 17:30:14.875"></status>
+</kw>
+<kw name="Check Components In Home Page" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:19.294" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20200209 17:30:19.294" starttime="20200209 17:30:17.294"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${welcomeText}</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:19.436" starttime="20200209 17:30:19.294"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${logoutButton}</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:19.471" starttime="20200209 17:30:19.437"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:19.472" starttime="20200209 17:30:17.293"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:30:19.884" starttime="20200209 17:30:19.472"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:19.884" critical="yes" starttime="20200209 17:30:04.933"></status>
+</test>
+<test id="s1-t9" name="Click Logout Button">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:29.309" starttime="20200209 17:30:19.888"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:29.309" starttime="20200209 17:30:19.887"></status>
+</kw>
+<kw name="Successfully Logged In" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:29.312" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:30:30.563" starttime="20200209 17:30:29.310"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:30.565" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:30:31.608" starttime="20200209 17:30:30.564"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:32.108" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20200209 17:30:32.108" starttime="20200209 17:30:31.608"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:32.109" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:30:32.156" starttime="20200209 17:30:32.108"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:32.156" starttime="20200209 17:30:29.310"></status>
+</kw>
+<kw name="Logout" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:33.158" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:30:33.158" starttime="20200209 17:30:32.157"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${logoutButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:33.159" level="INFO">Clicking element 'id=buttonLogout'.</msg>
+<status status="PASS" endtime="20200209 17:30:33.204" starttime="20200209 17:30:33.158"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:33.204" starttime="20200209 17:30:32.157"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:30:33.858" starttime="20200209 17:30:33.205"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:33.859" critical="yes" starttime="20200209 17:30:19.886"></status>
+</test>
+<test id="s1-t10" name="Check Components In Logged Out Page">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:42.580" starttime="20200209 17:30:33.864"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:42.581" starttime="20200209 17:30:33.863"></status>
+</kw>
+<kw name="Successfully Logged In" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:42.584" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:30:43.587" starttime="20200209 17:30:42.582"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:43.590" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:30:44.436" starttime="20200209 17:30:43.587"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:44.936" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20200209 17:30:44.936" starttime="20200209 17:30:44.436"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:44.937" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:30:44.988" starttime="20200209 17:30:44.936"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:44.988" starttime="20200209 17:30:42.581"></status>
+</kw>
+<kw name="Logout" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:45.990" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:30:45.990" starttime="20200209 17:30:44.989"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${logoutButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:45.991" level="INFO">Clicking element 'id=buttonLogout'.</msg>
+<status status="PASS" endtime="20200209 17:30:46.032" starttime="20200209 17:30:45.990"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:46.032" starttime="20200209 17:30:44.989"></status>
+</kw>
+<kw name="Check Components In Logged Out Page" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:47.034" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:30:47.034" starttime="20200209 17:30:46.033"></status>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${confirmLoggedOutText}</arg>
+<arg>${loggedOutMessage}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:47.035" level="INFO">Verifying element 'id=textView' contains text 'คุณได้ทำการออกจากระบบเรียบร้อยแล้ว'.</msg>
+<status status="PASS" endtime="20200209 17:30:47.071" starttime="20200209 17:30:47.034"></status>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is visible.</doc>
+<arguments>
+<arg>${confirmLoggedOutButton}</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:47.105" starttime="20200209 17:30:47.071"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:47.105" starttime="20200209 17:30:46.033"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:30:47.658" starttime="20200209 17:30:47.106"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:47.658" critical="yes" starttime="20200209 17:30:33.862"></status>
+</test>
+<test id="s1-t11" name="Confirm Logged Out">
+<kw name="Open Login Page" library="LoginKeywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${urlLoginPage}</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=emu_test_01</arg>
+<arg>appPackage=com.nextzy.sampleappfortest</arg>
+<arg>appActivity=LoginActivity</arg>
+</arguments>
+<status status="PASS" endtime="20200209 17:30:56.322" starttime="20200209 17:30:47.662"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:56.322" starttime="20200209 17:30:47.661"></status>
+</kw>
+<kw name="Successfully Logged In" library="LoginKeywords">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${usernameTextField}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:56.324" level="INFO">Typing text 'admin' into text field 'id=editTextUsername'</msg>
+<status status="PASS" endtime="20200209 17:30:57.362" starttime="20200209 17:30:56.323"></status>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:57.364" level="INFO">Typing password into text field 'id=editTextPassword'</msg>
+<status status="PASS" endtime="20200209 17:30:58.842" starttime="20200209 17:30:57.362"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<msg timestamp="20200209 17:30:59.342" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" endtime="20200209 17:30:59.342" starttime="20200209 17:30:58.842"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${loginButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:30:59.343" level="INFO">Clicking element 'id=buttonLogin'.</msg>
+<status status="PASS" endtime="20200209 17:30:59.388" starttime="20200209 17:30:59.342"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:30:59.389" starttime="20200209 17:30:56.323"></status>
+</kw>
+<kw name="Logout" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:31:00.390" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:31:00.390" starttime="20200209 17:30:59.390"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${logoutButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:31:00.391" level="INFO">Clicking element 'id=buttonLogout'.</msg>
+<status status="PASS" endtime="20200209 17:31:01.022" starttime="20200209 17:31:00.390"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:31:01.022" starttime="20200209 17:30:59.389"></status>
+</kw>
+<kw name="Agree You Logged Out" library="LoginKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20200209 17:31:02.024" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20200209 17:31:02.024" starttime="20200209 17:31:01.023"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${confirmLoggedOutButton}</arg>
+</arguments>
+<msg timestamp="20200209 17:31:02.025" level="INFO">Clicking element 'id=buttonLogoutSuccess'.</msg>
+<status status="PASS" endtime="20200209 17:31:02.066" starttime="20200209 17:31:02.024"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:31:02.066" starttime="20200209 17:31:01.023"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20200209 17:31:02.638" starttime="20200209 17:31:02.067"></status>
+</kw>
+<status status="PASS" endtime="20200209 17:31:02.638" critical="yes" starttime="20200209 17:30:47.660"></status>
+</test>
+<status status="PASS" endtime="20200209 17:31:02.640" starttime="20200209 17:28:46.156"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="11">Critical Tests</stat>
+<stat fail="0" pass="11">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="LoginAndroid" pass="11">LoginAndroid</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
